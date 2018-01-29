@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <div ng-app="MyApp" ng-controller="MyController">
+                <!-- Name:
+                <input type="text" ng-model="Name" />
+                <br />
+                <br /> -->
+                <div class="target" data-ng-repeat="j in lengthArr">
+                    <div class="red" ng-attr-id="{{'len-' +j + '-wid-' + i}}" data-ng-repeat="i in widthArr"></div>
+                    <br class="empty">
+                </div>
+                <!-- wid
+                <p ng-bind="randWid"></p>
+                len
+                <p ng-bind="randLen"></p>
+                 -->
+            </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="./app.js"></script>
+
+    <style>
+    .red{
+        float:left;
+  margin: 5px;
+  height:30px;
+  width:30px;
+  border: 1px solid black;
+  border-color: black;
+}
+.empty{
+    clear: both;
+}
+
+img{
+    max-width:100%;
+max-height:100%;
+}
+</style>
+</body>
+</html>
